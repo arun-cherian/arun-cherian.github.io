@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Arun Cherian Thomas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- ============== HEADER & NAVIGATION ============== -->
+    <header>
+        <h1 class="my-name">Arun Cherian Thomas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ============== MAIN CONTENT ============== -->
+    <div class="container">
+        <main>
+             <!-- This is the main section to highlight your work. Each project has its own 'project-card'. -->
+            <section id="projects">
+                <h2>Projects Showcase</h2>
+
+                <!-- TODO: To add a new project, just copy and paste one of the entire 'project-card' divs -->
+                <!-- and change the content inside it. -->
+                
+                <!-- TODO: Don't forget to replace 'images/placeholder.jpg' with your real images! -->
+
+                <!-- Project Card 1: EMG Signal Acquisition -->
+                <div class="project-card">
+                    <h3>EMG Signal Acquisition and Enhancement Using Dual ADCs</h3>
+                    <img src="images/pulse.jpg" alt="EMG Signal Acquisition Project Diagram" style="width: 500px; height: 250px;">
+                    <div class="project-details">
+                        <p class="project-tech"><strong>Technologies:</strong> Analog Front End | MSP430 | NAU7802 | Simulink | Embedded C</p>
+                        <ul>
+                            <li>Used MSP 430 UART driver at 921600 btps using interrupt-based programming.</li>
+                            <li>Designed the I2C Interface between MSP430 and NAU7802 and debugged the protocol using an oscilloscope.</li>
+                            <li>Built an analog differential amplifier on a breadboard for collecting raw EMG data.</li>
+                            <li>Processed and visualized signals using MATLAB and SIMULINK.</li>
+                        </ul>
+                        <a href="https://github.com/arun-cherian" class="project-link" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: DCMI Camera System -->
+                <div class="project-card">
+                    <h3>DCMI Camera System using STM32</h3>
+                    <div style="display: flex; justify-content: center; gap: 20px; align-items: center; text-align: center;">
+                    <div>
+                        <img src="images/capture.jpg" alt="Captured image of setup" style="width: 300px;">
+                        <p>Captured Image of Setup</p>
+                    </div>
+                    <div>
+                        <img src="images/setup.jpg" alt="The setup" style="width: 300px;">
+                        <p>The Actual Setup</p>
+                    </div>
+                    </div>
+                    <div class="project-details">
+                        <p class="project-tech"><strong>Technologies:</strong> FreeRTOS | ARM | STM32 | FATFS | USB | DCMI</p>
+                        <ul>
+                            <li>!A work in progress!</li>
+                            <li>Used an STM32F407 controller with its DCMI Interface for camera data capture.</li>
+                            <li>Handled SDIO, USB FS, and DMA for high-throughput frame storage and transfer.</li>
+                            <li>Achieved real-time data acquisition through DMA and a parallel storage task.</li>
+                        </ul>
+                        <a href="https://github.com/arun-cherian" class="project-link" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Smart LED System -->
+                <div class="project-card">
+                    <h3>WS2812-Based Smart LED System</h3>
+                    <img src="images/placeholder.jpg" alt="Music-responsive smart LED system">
+                    <div class="project-details">
+                         <p class="project-tech"><strong>Technologies:</strong> FPGA (Cyclone II) | Verilog | Python | NodeMCU | Quartus II</p>
+                        <ul>
+                            <li>Developed a music-responsive LED system, initially on a NodeMCU and later ported to an FPGA.</li>
+                            <li>Designed modular state machines on the FPGA to handle UART communication, memory access, and LED control.</li>
+                            <li>Utilized Quartus II for HDL design and Python to stream audio data via a COM port.</li>
+                        </ul>
+                        <a href="https://github.com/arun-cherian" class="project-link" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- ============== FOOTER ============== -->
+    <footer>
+        <p>bye</p>
+    </footer>
+
+</body>
+</html>

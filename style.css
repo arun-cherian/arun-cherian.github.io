@@ -1,0 +1,212 @@
+/*
+    This is a CSS (Cascading Style Sheets) file.
+    It's used to add color, layout, and fonts to your HTML page.
+    I've added comments to explain what each section does.
+*/
+
+/* -- General Body and Font Styles -- */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Helps with the sticky footer */
+    flex-direction: column; /* Helps with the sticky footer */
+    min-height: 100vh; /* Helps with the sticky footer */
+}
+
+/* -- Main Container Layout -- */
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-grow: 1; /* This makes the main content area expand, pushing the footer down */
+}
+
+/* -- Header and Navigation Styles -- */
+header {
+    text-align: center;
+    padding: 20px 0 10px 0;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 30px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+header .my-name {
+    font-family: 'Roboto Slab', serif;
+    margin: 0 0 15px 0;
+    font-size: 2.5em;
+    color: #2c3e50;
+}
+
+/* NEW: Navigation Bar Styles */
+nav ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between nav items */
+}
+
+nav a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+/* This style is applied to the link of the page you are currently on */
+nav a.active {
+    background-color: #2c3e50;
+    color: #ffffff;
+}
+
+/* -- General Section Styles -- */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-family: 'Roboto Slab', serif;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* -- PROJECT CARD STYLES (from before, no changes needed) -- */
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.project-card h3 {
+    background-color: #2c3e50;
+    color: #ffffff;
+    margin: 0;
+    padding: 15px 20px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #eaeaea; 
+}
+
+.project-details {
+    padding: 20px;
+}
+
+.project-tech {
+    font-size: 0.9em;
+    color: #555;
+    font-style: italic;
+    margin-top: 0;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.project-link {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #2980b9;
+}
+
+
+/* -- Resume and Skills Page Styles -- */
+.job h3, .job h4 {
+    margin-bottom: 5px;
+}
+.job-date {
+    font-style: italic;
+    color: #777;
+    margin-top: 0;
+}
+
+.two-columns {
+    display: flex;
+    gap: 40px;
+}
+.column {
+    flex: 1;
+}
+
+/* -- Contact Page Styles -- */
+.contact-details-list {
+    list-style: none;
+    padding: 0;
+}
+.contact-details-list li {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+.contact-details-list a {
+    color: #3498db;
+    text-decoration: none;
+}
+.contact-details-list a:hover {
+    text-decoration: underline;
+}
+
+/* -- Footer Styles -- */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 0.9em;
+    color: #777;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+/* -- RESPONSIVE DESIGN for mobile phones -- */
+@media (max-width: 768px) {
+    .two-columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav links vertically on small screens */
+        gap: 5px;
+    }
+
+    header .my-name {
+        font-size: 2em;
+    }
+}
